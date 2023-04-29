@@ -1,19 +1,30 @@
-# DB
-Here we have our DataBase
+Подключаемся к Redis (после возникновения проблем с подключением через colab, перешел в VS Code)
+![](screen6.jpg)
+![](screen7.jpg)
+![](screen1.jpg)
 
-See how find works:
-![](Screenshot_1.png)
+С помощью команд set, hset, zcard и lpush разобьем исходный json на структуры строка, hset, zset, list
+Сначала разобьем на строки и hset
+![](screen2.jpg)
+Теперь на zset:
+![](screen4.jpg)
+И наконец list:
+![](screen5.jpg)
 
-Then we insert information about a new customer:
-![](Screenshot_2.png)
 
-Delete several non-actual clients:
-![](Screenshot_3.png)
+Протестируем скорости сохранения и чтения
+Для hset:
+![](screen6.jpg)
+ыскуут3.jpg
+Для zset:
+![](screen4.jpg)
+Для list:
+![](screen5.jpg)
 
-Update information concerning our client:
-![](Screenshot_4.png)
 
-Having created an index, see the difference in compilation
-![](Screenshot_5.png)
-![](Screenshot_6.png)
-![](Screenshot_7.png)
+Настроим Redis Cluster на нодах:
+![](screen8.jpg)
+По аналогии с Redis:
+![](screen9.jpg)
+Пример работы команды:
+![](screen10.jpg)
